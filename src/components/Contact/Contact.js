@@ -4,6 +4,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 // import "react-toastify/dist/ReactToastify.css";
 import Alert from "./Alert";
 import Particle from "../Particle";
+import emailjs from 'emailjs-com';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -21,37 +22,34 @@ function Contact() {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+ const handleSubmit = (e) => {
+    e.preventDefault();
 
-        if (!formData.name || !formData.email || !formData.message) {
-            setAlert({ visible: true, type: "error", message: "Please fill all the fields" });
-            return;
-        }
+    if (!formData.name || !formData.email || !formData.message) {
+        setAlert({ visible: true, type: "error", message: "Please fill all the fields" });
+        return;
+    }
 
-        try {
-            const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbztj6fqbZiGOwb1hlLH5O2iyz8T6X-zPNrbN2T2zJi6moueszuip9PirlmbbKS_JQUpsQ/exec",
-                {
-                    method: "POST",
-                    mode: 'no-cors',
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                }
-            );
+    emailjs.send(
+        'service_r00qv2b',
+        'template_f3733d9',
+        {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+        },
+        'pSnuKTyHtXF0V1iGa' // previously USER_ID
+    )
+    .then(() => {
+        setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
+        setFormData({ name: "", email: "", message: "" });
+    })
+    .catch((error) => {
+        console.error(error);
+        setAlert({ visible: true, type: "error", message: "Error submitting form." });
+    });
+};
 
-            if (response.ok) {
-                setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
-                setFormData({ name: "", email: "", message: "" });
-            } else {
-                throw new Error("Submission failed");
-            }
-        } catch (error) {
-            setAlert({ visible: true, type: "error", message: "Error submitting form." });
-        }
-    };
 
 
 
@@ -97,7 +95,7 @@ function Contact() {
                                         placeholder="Enter your message"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        style={{ background: "transparent", color: "white", borderColor: "#c889e6" }}
+                                        style={{ background: "transparent", color: "white", borderColor: "#c889e6" , resize: "none",}}
                                     />
                                 </Form.Group>
 
@@ -109,7 +107,7 @@ function Contact() {
 
                         <Col md={6} className="text-center mt-5 mt-md-0">
                             <img
-                                src='about.png'
+                                src='images/about.png'
                                 alt="contact illustration"
                                 className="img-fluid"
                                 style={{ maxHeight: "400px" }}
