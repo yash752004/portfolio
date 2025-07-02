@@ -33,6 +33,7 @@ function Toolstack() {
           xs={4}
           md={2}
           className="tech-icons"
+          style={{ color: "white" }}
         >
           {tech.icon}
         </Col>

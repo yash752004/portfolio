@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 // import { toast, ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 import Alert from "./Alert";
+import Particle from "../Particle";
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ function Contact() {
     });
     const [alert, setAlert] = useState({ visible: false, type: "", message: "" });
 
- 
+
     const handleChange = (e) => {
         setFormData((prev) => ({
             ...prev,
@@ -20,7 +21,7 @@ function Contact() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!formData.name || !formData.email || !formData.message) {
@@ -28,16 +29,36 @@ function Contact() {
             return;
         }
 
-        // Simulate CSV saving logic here...
+        try {
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycbztj6fqbZiGOwb1hlLH5O2iyz8T6X-zPNrbN2T2zJi6moueszuip9PirlmbbKS_JQUpsQ/exec",
+                {
+                    method: "POST",
+                    mode: 'no-cors',
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                }
+            );
 
-        setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
-
-        setFormData({ name: "", email: "", message: "" });
+            if (response.ok) {
+                setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                throw new Error("Submission failed");
+            }
+        } catch (error) {
+            setAlert({ visible: true, type: "error", message: "Error submitting form." });
+        }
     };
+
+
 
     return (
         <>
-            <Container fluid className="about-section">
+            <Container fluid className="about-section" >
+
                 <Container>
                     <Row className="align-items-center" style={{ minHeight: "100vh" }}>
                         <Col md={6}>
@@ -95,8 +116,9 @@ function Contact() {
                             />
                         </Col>
                     </Row>
-                 
+
                 </Container>
+                <Particle />
             </Container>
 
             {alert.visible && (
