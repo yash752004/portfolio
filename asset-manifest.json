@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5c203b32.css",
-    "main.js": "/portfolio/static/js/main.8976170b.js",
+    "main.js": "/portfolio/static/js/main.35020938.js",
     "static/js/415.4d6acbeb.chunk.js": "/portfolio/static/js/415.4d6acbeb.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/2.png": "/portfolio/static/media/2.044250fb3c72a8630b04.png",
@@ -15,7 +15,7 @@
     "static/media/DIPC.png": "/portfolio/static/media/DIPC.1cebbd6b9f984ddec0f7.png",
     "static/media/6.png": "/portfolio/static/media/6.4b0d42e883b41cadebaa.png",
     "static/media/2.jpeg": "/portfolio/static/media/2.c0fab7432405dd46c7a6.jpeg",
-    "static/media/Yash-Patel-Resume.pdf": "/portfolio/static/media/Yash-Patel-Resume.84f07819ce6967b286bf.pdf",
+    "static/media/Yash-Patel-Resume.pdf": "/portfolio/static/media/Yash-Patel-Resume.0597cc6d07704ad7228e.pdf",
     "static/media/7.jpeg": "/portfolio/static/media/7.c6c53d0ae86a910f759a.jpeg",
     "static/media/7.png": "/portfolio/static/media/7.a44e085331468bac7b87.png",
     "static/media/home-bg.jpg": "/portfolio/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
@@ -23,12 +23,12 @@
     "static/media/pre.svg": "/portfolio/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/portfolio/index.html",
     "main.5c203b32.css.map": "/portfolio/static/css/main.5c203b32.css.map",
-    "main.8976170b.js.map": "/portfolio/static/js/main.8976170b.js.map",
+    "main.35020938.js.map": "/portfolio/static/js/main.35020938.js.map",
     "415.4d6acbeb.chunk.js.map": "/portfolio/static/js/415.4d6acbeb.chunk.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c203b32.css",
-    "static/js/main.8976170b.js"
+    "static/js/main.35020938.js"
   ]
 }
