@@ -11,16 +11,18 @@ import {
   SiCanva,
   SiAmazonaws,
   SiGithub,
+  SiPostman,
 } from "react-icons/si";
 
 function Toolstack() {
   const techs = [
+    { icon: <SiVisualstudiocode />, name: "VS Code" },
+    { icon: <SiPostman />, name: "Postman" },
     { icon: <SiDocker />, name: "Docker" },
     { icon: <SiAmazonaws />, name: "AWS (Lightsail/ECS)" },
     { icon: <SiFirebase />, name: "Firebase" },
     { icon: <SiGithub />, name: "GitHub" },
     { icon: <DiGit />, name: "Git" },
-    { icon: <SiVisualstudiocode />, name: "VS Code" },
     { icon: <SiAdobephotoshop />, name: "Photoshop" },
     { icon: <SiCanva />, name: "Canva" },
   ];

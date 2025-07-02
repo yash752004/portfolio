@@ -11,6 +11,7 @@ import {
   SiMysql,
   SiJson,
   SiExpress,
+  SiVite,
 } from "react-icons/si";
 
 function Techstack() {
@@ -18,11 +19,11 @@ function Techstack() {
     { icon: <DiJavascript1 />, name: "JavaScript" },
     { icon: <SiTypescript />, name: "TypeScript" },
     { icon: <DiReact />, name: "React.js" },
+    { icon: <SiVite />, name: "Vite" },
     { icon: <DiNodejs />, name: "Node.js" },
     { icon: <SiExpress />, name: "Express.js" },
     { icon: <DiMongodb />, name: "MongoDB" },
     { icon: <SiMysql />, name: "MySQL" },
-    { icon: <SiExpress />, name: "RESTful API" },
     { icon: <SiJson />, name: "JSON" },
   ];
 
@@ -34,7 +35,7 @@ function Techstack() {
           xs={4}
           md={2}
           className="tech-icons"
-           style={{ color: "white" }}
+          style={{ color: "white" }}
         >
           {tech.icon}
         </Col>
