@@ -22,33 +22,33 @@ function Contact() {
         }));
     };
 
- const handleSubmit = (e) => {
-    e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
-        setAlert({ visible: true, type: "error", message: "Please fill all the fields" });
-        return;
-    }
+        if (!formData.name || !formData.email || !formData.message) {
+            setAlert({ visible: true, type: "error", message: "Please fill all the fields" });
+            return;
+        }
 
-    emailjs.send(
-        'service_r00qv2b',
-        'template_f3733d9',
-        {
-            from_name: formData.name,
-            from_email: formData.email,
-            message: formData.message,
-        },
-        'pSnuKTyHtXF0V1iGa' // previously USER_ID
-    )
-    .then(() => {
-        setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
-        setFormData({ name: "", email: "", message: "" });
-    })
-    .catch((error) => {
-        console.error(error);
-        setAlert({ visible: true, type: "error", message: "Error submitting form." });
-    });
-};
+        emailjs.send(
+            'service_r00qv2b',
+            'template_f3733d9',
+            {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message ,
+            },
+            'pSnuKTyHtXF0V1iGa' // previously USER_ID
+        )
+            .then(() => {
+                setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
+                setFormData({ name: "", email: "", message: "" });
+            })
+            .catch((error) => {
+                console.error(error);
+                setAlert({ visible: true, type: "error", message: "Error submitting form." });
+            });
+    };
 
 
 
@@ -95,7 +95,7 @@ function Contact() {
                                         placeholder="Enter your message"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        style={{ background: "transparent", color: "white", borderColor: "#c889e6" , resize: "none",}}
+                                        style={{ background: "transparent", color: "white", borderColor: "#c889e6", resize: "none", }}
                                     />
                                 </Form.Group>
 
