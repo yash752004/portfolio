@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Carousel from "react-bootstrap/Carousel";
 
 function ProjectCard(props) {
   const [showModal, setShowModal] = useState(false);

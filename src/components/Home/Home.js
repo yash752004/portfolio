@@ -52,7 +52,7 @@ function Home() {
       <Techstack />
   
       <h1 className="project-heading">
-        Professional <strong className="purple">Toolset </strong>
+         <strong className="purple">Toolset </strong> I Use
       </h1>
 
       <Toolstack />
