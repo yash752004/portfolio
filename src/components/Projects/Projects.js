@@ -41,7 +41,7 @@ function Projects() {
               fullDescription="Engineered a health monitoring system CareHQ using Vite, TypeScript, designed for staff operating in hazardous
 environments. The platform allows uploading of staff profiles and medical records, facilitates consultations, highlights
 abnormal health conditions, and integrates comprehensive checklists for ambulance preparedness and medicine inventory.
-This system improves on-site safety compliance and supports proactive health management across the organization.."
+This system improves on-site safety compliance and supports proactive health management across the organization."
               imgPath={thumbail1}
               imgGallery={[thumbail1, carehq2, carehq3, carehq4, carehq5, carehq6, carehq7]}
               tags={["react", "vite", 'restApi', "typescript", "docker"]}
@@ -50,7 +50,7 @@ This system improves on-site safety compliance and supports proactive health man
           <Col md={4} className="project-card">
             <ProjectCard
               title="WireTime"
-              description="Workforce management platform."
+              description="Streamlined workforce and productivity management tool."
               fullDescription="Developed a workforce management platform used by 50+ team members to track tasks and time, improving productivity by
 40%. WireTime using Vite, TypeScript, React (MUI). The application streamlines task assignment, real-time punch-in/out
 tracking with geolocation, leave management, and automated email notifications. Additional modules include user profile
@@ -64,7 +64,7 @@ productivity."
           <Col md={4} className="project-card">
             <ProjectCard
               title="Sports Portal"
-              description="Interactive sports training portal"
+              description="Web-based sports training system with booking, payment, and admin controls."
               fullDescription="Developed an interactive Sports Portal using React, enabling users to explore training batches based on location and age
 group, choose from multiple packages, and seamlessly complete online payments. The platform features a dynamic landing
 page for user engagement and streamlines the booking process for sports programs. On the admin side, it supports batch

@@ -3,7 +3,7 @@ import { Col, Row, Card } from "react-bootstrap";
 import { FaNodeJs } from "react-icons/fa";
 import { SiTypescript, SiVite, SiDocker, SiAmazonaws, SiGithub } from "react-icons/si";
 import { MdGroups, MdBugReport, MdWork } from "react-icons/md";
-import dipclogo from "../../Assets/DIPC.png"; // cleaner direct logo URL
+import dipclogo from "../../Assets/DIPC.png";
 
 function Experience() {
   const experiences = [
@@ -11,7 +11,7 @@ function Experience() {
       icon: <MdWork />,
       title: "Full Stack Developer, DIPC Software",
       duration: "Sep 2023 - July 2025",
-      logo: dipclogo, // cleaner direct logo URL
+      logo: dipclogo,
       points: [
         "Worked with Vite, TypeScript, and Node.js to build full-stack applications.",
         "Implemented cloud deployment using AWS Lightsail and ECS for scalable production.",
@@ -31,9 +31,9 @@ function Experience() {
       {experiences.map((exp, index) => (
         <Col md={10} key={index}>
           <Card
-            className="p-4 mb-4 position-relative"
+            className="p-4 mb-4"
             style={{
-              background: "rgba(255, 255, 255, 0.05)",
+              background: "rgba(255, 255, 255, 0.04)",
               border: "1px solid rgba(168, 85, 247, 0.3)",
               borderRadius: "20px",
               backdropFilter: "blur(10px)",
@@ -41,39 +41,40 @@ function Experience() {
               color: "#f5f5f5",
             }}
           >
-            {/* Logo in top-right */}
-            <img
-              src={exp.logo}
-              alt="Company Logo"
-              style={{
-                position: "absolute",
-                top: "15px",
-                right: "15px",
-                width: "60px",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "10px",
-                backgroundColor: "white",
-                padding: "5px"
-              }}
-            />
-
             <Card.Body>
-              {/* Header */}
-              <div className="d-flex flex-column align-items-center mb-4">
-                <div style={{ fontSize: "2.5rem", color: "#a855f7", marginBottom: "12px" }}>{exp.icon}</div>
-                <h4 style={{ fontWeight: "600", marginBottom: "4px", textAlign: "center" }}>{exp.title}</h4>
-                <div
+              {/* Header with logo and title */}
+              <div className="d-flex align-items-center mb-4 flex-wrap">
+                {/* Logo on the left */}
+                <img
+                  src={exp.logo}
+                  alt="Company Logo"
                   style={{
-                    background: "#a855f7",
-                    color: "white",
-                    padding: "2px 10px",
-                    borderRadius: "8px",
-                    fontSize: "0.9rem",
-                    fontWeight: "500"
+                    width: "70px",
+                    height: "auto",
+                    objectFit: "contain",
+                    borderRadius: "10px",
+                    backgroundColor: "white",
+                    padding: "5px",
+                    marginRight: "20px"
                   }}
-                >
-                  {exp.duration}
+                />
+                {/* Title + Duration */}
+                <div style={{ flex: 1, minWidth: "200px", textAlign: "left" }}>
+                  <div style={{ fontSize: "2rem", color: "#a855f7" }}>{exp.icon}</div>
+                  <h4 style={{ fontWeight: "600", marginBottom: "6px" }}>{exp.title}</h4>
+                  <div
+                    style={{
+                      background: "#a855f7",
+                      color: "white",
+                      padding: "2px 10px",
+                      borderRadius: "8px",
+                      fontSize: "0.9rem",
+                      fontWeight: "500",
+                      display: "inline-block"
+                    }}
+                  >
+                    {exp.duration}
+                  </div>
                 </div>
               </div>
 

@@ -99,7 +99,8 @@ function ProjectCard(props) {
                   minHeight: "100%",
                 }}
               >
-                <h5>Description</h5>
+
+                <h5 style={{ color: "#a855f7" }}>Description</h5>
                 <p style={{ textAlign: "justify" }}>{props.fullDescription}</p>
               </div>
 
@@ -111,7 +112,10 @@ function ProjectCard(props) {
                   overflowY: "auto",
                   display: "flex",
                   flexDirection: "column",
-                  gap: "10px",
+                  gap: "12px",
+                  paddingRight: "5px",
+                  scrollbarWidth: "thin",
+                  scrollbarColor: "#a855f7 transparent",
                 }}
               >
                 {props.imgGallery && props.imgGallery.length > 0 ? (
@@ -122,19 +126,47 @@ function ProjectCard(props) {
                       alt={`Preview ${idx}`}
                       style={{
                         width: "100%",
-                        borderRadius: "8px",
+                        borderRadius: "10px",
                         objectFit: "cover",
+                        maxHeight: "200px",
+                        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                        cursor: "pointer",
+                      }}
+                      onMouseOver={e => {
+                        e.currentTarget.style.transform = "scale(1.02)";
+                        e.currentTarget.style.boxShadow = "0 6px 18px rgba(0,0,0,0.2)";
+                      }}
+                      onMouseOut={e => {
+                        e.currentTarget.style.transform = "scale(1)";
+                        e.currentTarget.style.boxShadow = "none";
                       }}
                     />
                   ))
-                ) : (
+                ) : props.imgPath ? (
                   <img
                     src={props.imgPath}
                     alt="Project"
-                    style={{ width: "100%", borderRadius: "8px" }}
+                    style={{
+                      width: "100%",
+                      borderRadius: "10px",
+                      objectFit: "cover",
+                      maxHeight: "300px",
+                    }}
                   />
+                ) : (
+                  <div
+                    style={{
+                      color: "#ccc",
+                      textAlign: "center",
+                      padding: "20px",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    No images available.
+                  </div>
                 )}
               </div>
+
             </div>
           </Modal.Body>
 
