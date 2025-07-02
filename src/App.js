@@ -6,16 +6,20 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
-  HashRouter  as Router,
+  BrowserRouter,
+  HashRouter,
   Route,
   Routes,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Contact from "./components/Contact/Contact";
+
+const RouterComponent =
+  process.env.NODE_ENV === "production" ? HashRouter : BrowserRouter;
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -29,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <RouterComponent>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
@@ -39,11 +43,11 @@ function App() {
           <Route path="/project" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/"/>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>
-    </Router>
+    </RouterComponent>
   );
 }
 
