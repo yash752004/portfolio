@@ -5,7 +5,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Alert from "./Alert";
 import Particle from "../Particle";
 import emailjs from 'emailjs-com';
-
+import ContactImage from "../../Assets/about.png"; // Adjust the path as necessary
 function Contact() {
     const [formData, setFormData] = useState({
         name: "",
@@ -107,7 +107,7 @@ function Contact() {
 
                         <Col md={6} className="text-center mt-5 mt-md-0">
                             <img
-                                src='images/about.png'
+                                src={ContactImage}
                                 alt="contact illustration"
                                 className="img-fluid"
                                 style={{ maxHeight: "400px" }}

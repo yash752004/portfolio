@@ -3,6 +3,28 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
+import thumbail1 from "../../Assets/images/carehq/1.png";
+import carehq2 from "../../Assets/images/carehq/2.png";
+import carehq3 from "../../Assets/images/carehq/3.png";
+import carehq4 from "../../Assets/images/carehq/4.png";
+import carehq5 from "../../Assets/images/carehq/5.png";
+import carehq6 from "../../Assets/images/carehq/6.png";
+import carehq7 from "../../Assets/images/carehq/7.png";
+
+import wiretime1 from "../../Assets/images/WireTime/1.jpeg";
+import wiretime2 from "../../Assets/images/WireTime/2.jpeg";
+import wiretime3 from "../../Assets/images/WireTime/3.png";
+import wiretime4 from "../../Assets/images/WireTime/4.png";
+import wiretime5 from "../../Assets/images/WireTime/5.png";
+import wiretime6 from "../../Assets/images/WireTime/6.png";
+import wiretime7 from "../../Assets/images/WireTime/7.jpeg";
+
+import sports1 from "../../Assets/images/sportsportal/1.png";
+import sports2 from "../../Assets/images/sportsportal/2.png";
+import sports3 from "../../Assets/images/sportsportal/3.png";
+import sports4 from "../../Assets/images/sportsportal/4.png";
+import sports5 from "../../Assets/images/sportsportal/5.png";
+
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -20,8 +42,8 @@ function Projects() {
 environments. The platform allows uploading of staff profiles and medical records, facilitates consultations, highlights
 abnormal health conditions, and integrates comprehensive checklists for ambulance preparedness and medicine inventory.
 This system improves on-site safety compliance and supports proactive health management across the organization.."
-              imgPath="images/carehq/1.png"
-              imgGallery={["images/carehq/1.png", "images/carehq/2.png", "images/carehq/3.png", "images/carehq/4.png", "images/carehq/5.png", "images/carehq/6.png", "images/carehq/7.png"]}
+              imgPath={thumbail1}
+              imgGallery={[thumbail1, carehq2, carehq3, carehq4, carehq5, carehq6, carehq7]}
               tags={["react", "vite", 'restApi', "typescript", "docker"]}
             />
           </Col>
@@ -34,8 +56,8 @@ This system improves on-site safety compliance and supports proactive health man
 tracking with geolocation, leave management, and automated email notifications. Additional modules include user profile
 customization and a dynamic dashboard, empowering managers with clear visibility into project progress and team
 productivity."
-              imgPath="images/WireTime/1.jpeg"
-              imgGallery={["images/WireTime/1.jpeg", "images/WireTime/2.jpeg", "images/WireTime/3.png", "images/WireTime/4.png", "images/WireTime/5.png", "images/WireTime/6.png", "images/WireTime/7.jpeg"]}
+              imgPath={wiretime1}
+              imgGallery={[wiretime1, wiretime2, wiretime3, wiretime4, wiretime5, wiretime6, wiretime7]}
               tags={["vite", 'restApi', "typescript", "docker"]}
             />
           </Col>
@@ -50,8 +72,8 @@ creation, with functionalities to add trainers, configure package pricing, assig
 enhances operational efficiency and provides a unified interface for both users and administrators in managing sports training
 programs.
 "
-              imgPath="images/sportsportal/1.png"
-              imgGallery={["images/sportsportal/1.png", "images/sportsportal/2.png", "images/sportsportal/3.png", "images/sportsportal/4.png", "images/sportsportal/5.png"]}
+              imgPath={sports1}
+              imgGallery={[sports1, sports2, sports3, sports4, sports5]}
               tags={["react", 'MUI', 'css', "docker", 'restApi']}
             />
           </Col>
