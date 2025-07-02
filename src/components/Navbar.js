@@ -8,6 +8,8 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
+import { BiMessageSquareDetail } from 'react-icons/bi';
+
 
 import { CgFileDocument } from "react-icons/cg";
 
@@ -54,7 +56,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-           
+
 
             <Nav.Item>
               <Nav.Link
@@ -78,7 +80,17 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-           
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <BiMessageSquareDetail style={{ marginBottom: "2px" }} /> Get in Touch
+              </Nav.Link>
+            </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

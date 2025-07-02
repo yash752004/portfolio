@@ -6,6 +6,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import Techstack from "../About/Techstack";
 import Toolstack from "../About/Toolstack";
+import Experience from "./Experiance";
 
 function Home() {
   return (
@@ -44,6 +45,13 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+
+
+      <h1 className="project-heading">
+        Work <strong className="purple">Experiance </strong>
+      </h1>
+
+      <Experience />
 
       <h1 className="project-heading">
         Professional <strong className="purple">Skillset </strong>
