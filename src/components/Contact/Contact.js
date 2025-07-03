@@ -4,6 +4,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 // import "react-toastify/dist/ReactToastify.css";
 import Alert from "./Alert";
 import Particle from "../Particle";
+import Tilt from "react-parallax-tilt";
 import emailjs from 'emailjs-com';
 import ContactImage from "../../Assets/about.png"; // Adjust the path as necessary
 function Contact() {
@@ -27,6 +28,9 @@ function Contact() {
 
         if (!formData.name || !formData.email || !formData.message) {
             setAlert({ visible: true, type: "error", message: "Please fill all the fields" });
+            setTimeout(() => {
+                setAlert({ visible: false, type: "", message: "" });
+            }, 2000);
             return;
         }
 
@@ -36,17 +40,23 @@ function Contact() {
             {
                 name: formData.name,
                 email: formData.email,
-                message: formData.message ,
+                message: formData.message,
             },
             'pSnuKTyHtXF0V1iGa' // previously USER_ID
         )
             .then(() => {
                 setAlert({ visible: true, type: "success", message: "Message submitted successfully!" });
+                setTimeout(() => {
+                    setAlert({ visible: false, type: "", message: "" });
+                }, 2000);
                 setFormData({ name: "", email: "", message: "" });
             })
             .catch((error) => {
                 console.error(error);
                 setAlert({ visible: true, type: "error", message: "Error submitting form." });
+                setTimeout(() => {
+                    setAlert({ visible: false, type: "", message: "" });
+                }, 2000);
             });
     };
 
@@ -106,12 +116,14 @@ function Contact() {
                         </Col>
 
                         <Col md={6} className="text-center mt-5 mt-md-0">
-                            <img
-                                src={ContactImage}
-                                alt="contact illustration"
-                                className="img-fluid"
-                                style={{ maxHeight: "400px" }}
-                            />
+                            <Tilt>
+                                <img
+                                    src={ContactImage}
+                                    alt="contact illustration"
+                                    className="img-fluid"
+                                    style={{ maxHeight: "400px" }}
+                                />
+                            </Tilt>
                         </Col>
                     </Row>
 

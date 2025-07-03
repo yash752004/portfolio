@@ -8,7 +8,7 @@ import {
 } from "react-icons/di";
 import {
   SiTypescript,
-  SiMysql,
+  // SiMysql,
   SiJson,
   SiExpress,
   SiVite,
@@ -31,7 +31,7 @@ function Techstack() {
     { icon: <DiNodejs />, name: "Node.js" },
     { icon: <SiExpress />, name: "Express.js" },
     { icon: <DiMongodb />, name: "MongoDB" },
-    { icon: <SiMysql />, name: "MySQL" },
+    // { icon: <SiMysql />, name: "MySQL" },
     { icon: <SiJson />, name: "JSON" },
   ];
 

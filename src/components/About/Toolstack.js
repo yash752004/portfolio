@@ -12,7 +12,9 @@ import {
   SiAmazonaws,
   SiGithub,
   SiPostman,
+  SiFigma 
 } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
 
 function Toolstack() {
   const techs = [
@@ -23,6 +25,8 @@ function Toolstack() {
     { icon: <SiFirebase />, name: "Firebase" },
     { icon: <SiGithub />, name: "GitHub" },
     { icon: <DiGit />, name: "Git" },
+    { icon: <MdEmail />, name: "SMTP Email" },
+    { icon: <SiFigma />, name: "Figma" },
     { icon: <SiAdobephotoshop />, name: "Photoshop" },
     { icon: <SiCanva />, name: "Canva" },
   ];

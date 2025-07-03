@@ -27,7 +27,7 @@ function Home2() {
               <i>
                 <b className="purple">clean UI/UX and full-stack web solutions</b>
               </i>
-              , and I’ve built real-world projects using <b className="purple">MongoDB, MySQL</b>, and containerized apps with <b className="purple">Docker</b>.
+              , and I’ve built real-world projects using <b className="purple">MongoDB</b>, and containerized apps with <b className="purple">Docker</b>.
               <br />
               <br />
               I also have experience deploying applications on&nbsp;
