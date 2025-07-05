@@ -25,6 +25,9 @@ import sports3 from "../../Assets/images/sportsportal/3.png";
 import sports4 from "../../Assets/images/sportsportal/4.png";
 import sports5 from "../../Assets/images/sportsportal/5.png";
 
+import inventoryscan1 from "../../Assets/images/inventoryscan/1.png";
+import inventoryscan2 from "../../Assets/images/inventoryscan/2.png";
+
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -75,6 +78,16 @@ programs.
               imgPath={sports1}
               imgGallery={[sports1, sports2, sports3, sports4, sports5]}
               tags={["react", 'MUI', 'css', "docker", 'restApi']}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Inventory Scan"
+              description="Web-based inventory scan system with save data in json or csv."
+              fullDescription="Built a web-based Inventory Scan system with barcode scanning to simplify inventory management. Users can scan items, view data in a structured format, and export it as JSON or CSV. The app also supports importing inventory from JSON or CSV files, enabling easy updates. Designed with a user-friendly interface for fast, accurate inventory tracking in retail or warehouse settings."
+              imgPath={inventoryscan1}
+              imgGallery={[inventoryscan1, inventoryscan2]}
+              tags={['HTML', 'CSS', 'JavaScript', 'JSON']}
             />
           </Col>
 
