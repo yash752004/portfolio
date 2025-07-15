@@ -28,6 +28,14 @@ import sports5 from "../../Assets/images/sportsportal/5.png";
 import inventoryscan1 from "../../Assets/images/inventoryscan/1.png";
 import inventoryscan2 from "../../Assets/images/inventoryscan/2.png";
 
+import gemini1 from "../../Assets/images/chatapp/1.png";
+import gemini2 from "../../Assets/images/chatapp/3.png";
+import gemini3 from "../../Assets/images/chatapp/7.png";
+import gemini4 from "../../Assets/images/chatapp/4.png";
+import gemini5 from "../../Assets/images/chatapp/5.png";
+import gemini6 from "../../Assets/images/chatapp/6.png";
+
+
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -88,6 +96,17 @@ programs.
               imgPath={inventoryscan1}
               imgGallery={[inventoryscan1, inventoryscan2]}
               tags={['HTML', 'CSS', 'JavaScript', 'JSON']}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Gemini Chat App"
+              description="AI-powered chat interface with OTP login, chatrooms, image upload, and pagination."
+              fullDescription="Built a Gemini-style conversational AI chat application with features like OTP-based authentication, multi-chatroom management, real-time AI message simulation, image uploads, and reverse infinite scroll with pagination. Implements Redux for state management, form validation with React Hook Form + Zod, and a polished, responsive UI using Material UI. Dark mode, scroll-to-bottom, and keyboard accessibility are also integrated for a complete UX."
+              imgPath={gemini1}
+              imgGallery={[gemini1, gemini2, gemini3, gemini4, gemini5, gemini6]}
+              tags={['React', 'Redux', 'Material UI', 'Zod', 'JavaScript']}
+              liveLink="https://gemini-chat-app-gamma.vercel.app/"
             />
           </Col>
 
