@@ -35,6 +35,12 @@ import gemini4 from "../../Assets/images/chatapp/4.png";
 import gemini5 from "../../Assets/images/chatapp/5.png";
 import gemini6 from "../../Assets/images/chatapp/6.png";
 
+import ecommerse0 from "../../Assets/images/Ecommerse/0.png";
+import ecommerse1 from "../../Assets/images/Ecommerse/1.png";
+import ecommerse2 from "../../Assets/images/Ecommerse/2.png";
+import ecommerse3 from "../../Assets/images/Ecommerse/3.png";
+import ecommerse4 from "../../Assets/images/Ecommerse/4.png";
+import ecommerse5 from "../../Assets/images/Ecommerse/5.png";
 
 function Projects() {
   return (
@@ -107,6 +113,16 @@ programs.
               imgGallery={[gemini1, gemini2, gemini3, gemini4, gemini5, gemini6]}
               tags={['React', 'Redux', 'Material UI', 'Zod', 'JavaScript']}
               liveLink="https://gemini-chat-app-gamma.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Jewellery Ecommerce App"
+              description="Ecommerce platform for jewellery with product catalog."
+              fullDescription="Developed a comprehensive Ecommerce platform for jewellery, Home page with diffrent diffrent categories."
+              imgPath={ecommerse0}
+              imgGallery={[ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5]}
+              tags={['React', 'Tailwind CSS', 'JavaScript' , 'NodeJs', 'Express', 'MongoDB']}
             />
           </Col>
 
