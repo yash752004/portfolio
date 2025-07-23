@@ -122,7 +122,7 @@ programs.
               description="Ecommerce platform for jewellery with product catalog."
               fullDescription="Developed a comprehensive Ecommerce platform for jewellery, Home page with diffrent diffrent categories."
               imgPath={ecommerse0}
-              imgGallery={[ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5, ecommerse6]}
+              imgGallery={[ecommerse0,ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5, ecommerse6]}
               tags={['React', 'Tailwind CSS', 'JavaScript' , 'NodeJs', 'Express', 'MongoDB']}
             />
           </Col>
