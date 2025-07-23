@@ -41,6 +41,7 @@ import ecommerse2 from "../../Assets/images/Ecommerse/2.png";
 import ecommerse3 from "../../Assets/images/Ecommerse/3.png";
 import ecommerse4 from "../../Assets/images/Ecommerse/4.png";
 import ecommerse5 from "../../Assets/images/Ecommerse/5.png";
+import ecommerse6 from "../../Assets/images/Ecommerse/6.png";
 
 function Projects() {
   return (
@@ -121,7 +122,7 @@ programs.
               description="Ecommerce platform for jewellery with product catalog."
               fullDescription="Developed a comprehensive Ecommerce platform for jewellery, Home page with diffrent diffrent categories."
               imgPath={ecommerse0}
-              imgGallery={[ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5]}
+              imgGallery={[ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5, ecommerse6]}
               tags={['React', 'Tailwind CSS', 'JavaScript' , 'NodeJs', 'Express', 'MongoDB']}
             />
           </Col>
