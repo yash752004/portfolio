@@ -52,6 +52,29 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Jewellery Ecommerce App"
+              description="Ecommerce platform for jewellery with product catalog."
+              fullDescription="Developed a comprehensive Ecommerce platform for jewellery, Home page with diffrent diffrent categories."
+              imgPath={ecommerse0}
+              imgGallery={[ecommerse0, ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5, ecommerse6]}
+              tags={['React', 'Tailwind CSS', 'JavaScript', 'NodeJs', 'Express', 'MongoDB']}
+              liveLink="https://jewellery-ecommerce-flax.vercel.app/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Gemini Chat App"
+              description="AI-powered chat interface with OTP login, chatrooms, image upload, and pagination."
+              fullDescription="Built a Gemini-style conversational AI chat application with features like OTP-based authentication, multi-chatroom management, real-time AI message simulation, image uploads, and reverse infinite scroll with pagination. Implements Redux for state management, form validation with React Hook Form + Zod, and a polished, responsive UI using Material UI. Dark mode, scroll-to-bottom, and keyboard accessibility are also integrated for a complete UX."
+              imgPath={gemini1}
+              imgGallery={[gemini1, gemini2, gemini3, gemini4, gemini5, gemini6]}
+              tags={['React', 'Redux', 'Material UI', 'Zod', 'JavaScript']}
+              liveLink="https://gemini-chat-app-gamma.vercel.app/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               title="CareHQ"
@@ -63,6 +86,7 @@ This system improves on-site safety compliance and supports proactive health man
               imgPath={thumbail1}
               imgGallery={[thumbail1, carehq2, carehq3, carehq4, carehq5, carehq6, carehq7]}
               tags={["react", "vite", 'restApi', "typescript", "docker"]}
+            // liveLink="https://carehq.app/"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -103,27 +127,7 @@ programs.
               imgPath={inventoryscan1}
               imgGallery={[inventoryscan1, inventoryscan2]}
               tags={['HTML', 'CSS', 'JavaScript', 'JSON']}
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="Gemini Chat App"
-              description="AI-powered chat interface with OTP login, chatrooms, image upload, and pagination."
-              fullDescription="Built a Gemini-style conversational AI chat application with features like OTP-based authentication, multi-chatroom management, real-time AI message simulation, image uploads, and reverse infinite scroll with pagination. Implements Redux for state management, form validation with React Hook Form + Zod, and a polished, responsive UI using Material UI. Dark mode, scroll-to-bottom, and keyboard accessibility are also integrated for a complete UX."
-              imgPath={gemini1}
-              imgGallery={[gemini1, gemini2, gemini3, gemini4, gemini5, gemini6]}
-              tags={['React', 'Redux', 'Material UI', 'Zod', 'JavaScript']}
-              liveLink="https://gemini-chat-app-gamma.vercel.app/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              title="Jewellery Ecommerce App"
-              description="Ecommerce platform for jewellery with product catalog."
-              fullDescription="Developed a comprehensive Ecommerce platform for jewellery, Home page with diffrent diffrent categories."
-              imgPath={ecommerse0}
-              imgGallery={[ecommerse0,ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5, ecommerse6]}
-              tags={['React', 'Tailwind CSS', 'JavaScript' , 'NodeJs', 'Express', 'MongoDB']}
+              liveLink="https://inventory-check-seven.vercel.app/"
             />
           </Col>
 

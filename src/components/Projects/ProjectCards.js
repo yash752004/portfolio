@@ -56,6 +56,19 @@ function ProjectCard(props) {
               ))}
           </div>
 
+          {/* Live Link Button */}
+          {props.liveLink && (
+            <Button
+              variant="success"
+              href={props.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginTop: "15px", marginRight: "10px" }}
+            >
+              🔗 Live
+            </Button>
+          )}
+
           <Button
             variant="outline-light"
             onClick={handleShow}
