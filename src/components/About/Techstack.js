@@ -16,6 +16,7 @@ import {
   SiCss3,
   SiTailwindcss,
   SiMui,
+  SiNextdotjs,
 } from "react-icons/si";
 
 function Techstack() {
@@ -27,6 +28,7 @@ function Techstack() {
     { icon: <SiTypescript />, name: "TypeScript" },
     { icon: <DiReact />, name: "React.js" },
     { icon: <SiVite />, name: "Vite" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
     { icon: <SiMui />, name: "MUI (Material-UI)" },
     { icon: <DiNodejs />, name: "Node.js" },
     { icon: <SiExpress />, name: "Express.js" },
