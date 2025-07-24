@@ -60,7 +60,7 @@ function Projects() {
               fullDescription="Developed a comprehensive Ecommerce platform for jewellery, Home page with diffrent diffrent categories."
               imgPath={ecommerse0}
               imgGallery={[ecommerse0, ecommerse1, ecommerse2, ecommerse3, ecommerse4, ecommerse5, ecommerse6]}
-              tags={['React', 'Tailwind CSS', 'JavaScript', 'NodeJs', 'Express', 'MongoDB']}
+              tags={['Next.JS', 'Tailwind CSS', 'NodeJs', 'Express', 'MongoDB']}
               liveLink="https://jewellery-ecommerce-flax.vercel.app/"
             />
           </Col>
